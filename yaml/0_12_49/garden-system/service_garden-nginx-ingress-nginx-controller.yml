@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: garden-nginx
+    meta.helm.sh/release-namespace: garden-system
+  creationTimestamp: "2023-05-26T13:57:56Z"
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: garden-nginx
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/version: 1.1.0
+    helm.sh/chart: ingress-nginx-4.0.13
+  name: garden-nginx-ingress-nginx-controller
+  namespace: garden-system
+  resourceVersion: "1298511"
+  uid: aa5600b0-8060-490b-a913-a647a76e8c77
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.104.192.248
+  clusterIPs:
+  - 10.104.192.248
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - appProtocol: http
+    name: http
+    nodePort: 30098
+    port: 80
+    protocol: TCP
+    targetPort: http
+  - appProtocol: https
+    name: https
+    nodePort: 30071
+    port: 443
+    protocol: TCP
+    targetPort: https
+  selector:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: garden-nginx
+    app.kubernetes.io/name: ingress-nginx
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - hostname: localhost

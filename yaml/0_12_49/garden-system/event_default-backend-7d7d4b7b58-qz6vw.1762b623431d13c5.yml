@@ -1,0 +1,28 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-05-26T13:57:53Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{default-backend}
+  kind: Pod
+  name: default-backend-7d7d4b7b58-qz6vw
+  namespace: garden-system
+  resourceVersion: "1298466"
+  uid: 244c8729-9e2c-4303-a13a-9a26f5e98578
+kind: Event
+lastTimestamp: "2023-05-26T13:57:53Z"
+message: Created container default-backend
+metadata:
+  creationTimestamp: "2023-05-26T13:57:53Z"
+  name: default-backend-7d7d4b7b58-qz6vw.1762b623431d13c5
+  namespace: garden-system
+  resourceVersion: "1298478"
+  uid: 8dc3eee7-6015-4eab-bd04-d0fc6258632a
+reason: Created
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: docker-desktop
+type: Normal

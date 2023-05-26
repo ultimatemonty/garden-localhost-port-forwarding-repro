@@ -1,0 +1,24 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-05-26T13:25:53Z"
+deprecatedLastTimestamp: "2023-05-26T13:25:53Z"
+deprecatedSource:
+  component: nginx-ingress-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-05-26T13:25:53Z"
+  name: garden-nginx-ingress-nginx-controller-wsb4w.1762b4644c4c0015
+  namespace: garden-system
+  resourceVersion: "1295798"
+  uid: 669eadaa-ed87-4868-a615-24ff63db0ade
+note: NGINX reload triggered due to a change in configuration
+reason: RELOAD
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: garden-nginx-ingress-nginx-controller-wsb4w
+  namespace: garden-system
+  resourceVersion: "1295784"
+  uid: 833d442d-381c-4804-99b3-a8addafc9f4f
+type: Normal

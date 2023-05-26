@@ -1,0 +1,26 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    meta.helm.sh/release-name: garden-nginx
+    meta.helm.sh/release-namespace: garden-system
+  creationTimestamp: "2023-05-26T13:25:50Z"
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: garden-nginx
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/version: 1.1.0
+    helm.sh/chart: ingress-nginx-4.0.13
+  name: garden-nginx-ingress-nginx
+  namespace: garden-system
+  resourceVersion: "1295769"
+  uid: 9b1a4c4a-9864-4f72-b34b-a857c002c652
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: garden-nginx-ingress-nginx
+subjects:
+- kind: ServiceAccount
+  name: garden-nginx-ingress-nginx
+  namespace: garden-system

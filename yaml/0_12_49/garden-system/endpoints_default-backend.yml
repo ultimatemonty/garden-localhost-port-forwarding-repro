@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-05-26T13:57:53Z"
+  creationTimestamp: "2023-05-26T13:57:52Z"
+  labels:
+    module: default-backend
+    service: default-backend
+  name: default-backend
+  namespace: garden-system
+  resourceVersion: "1298482"
+  uid: 80a9a8d2-2e26-4f85-9d7b-c658f3fcd707
+subsets:
+- addresses:
+  - ip: 10.1.15.140
+    nodeName: docker-desktop
+    targetRef:
+      kind: Pod
+      name: default-backend-7d7d4b7b58-qz6vw
+      namespace: garden-system
+      uid: 244c8729-9e2c-4303-a13a-9a26f5e98578
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP

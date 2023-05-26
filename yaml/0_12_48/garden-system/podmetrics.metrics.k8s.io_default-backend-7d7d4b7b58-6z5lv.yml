@@ -1,0 +1,17 @@
+apiVersion: metrics.k8s.io/v1beta1
+containers:
+- name: default-backend
+  usage:
+    cpu: "0"
+    memory: 1804Ki
+kind: PodMetrics
+metadata:
+  creationTimestamp: "2023-05-26T13:49:21Z"
+  labels:
+    module: default-backend
+    pod-template-hash: 7d7d4b7b58
+    service: default-backend
+  name: default-backend-7d7d4b7b58-6z5lv
+  namespace: garden-system
+timestamp: "2023-05-26T13:49:08Z"
+window: 14.767s

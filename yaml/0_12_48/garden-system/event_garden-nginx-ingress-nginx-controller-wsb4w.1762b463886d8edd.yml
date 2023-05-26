@@ -1,0 +1,27 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-05-26T13:25:50Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: garden-nginx-ingress-nginx-controller-wsb4w
+  namespace: garden-system
+  resourceVersion: "1295779"
+  uid: 833d442d-381c-4804-99b3-a8addafc9f4f
+kind: Event
+lastTimestamp: "2023-05-26T13:25:50Z"
+message: Successfully assigned garden-system/garden-nginx-ingress-nginx-controller-wsb4w
+  to docker-desktop
+metadata:
+  creationTimestamp: "2023-05-26T13:25:50Z"
+  name: garden-nginx-ingress-nginx-controller-wsb4w.1762b463886d8edd
+  namespace: garden-system
+  resourceVersion: "1295783"
+  uid: 332842aa-e41a-491b-83c7-44d55e0ec8f2
+reason: Scheduled
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: default-scheduler
+type: Normal

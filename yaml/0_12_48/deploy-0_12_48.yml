@@ -1,0 +1,175 @@
+# 0.12.48
+---
+apiVersion: v1
+items:
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+      garden.io/configured.replicas: "1"
+      garden.io/generated: "true"
+      garden.io/manifest-hash: 65a3c733dd05a34d3b8a8f0777a8379b3c5c81ec452ea27b3bddd4d7808f4746
+      garden.io/version: v-cc30670b1e
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"garden.io/configured.replicas":"1","garden.io/generated":"true","garden.io/manifest-hash":"65a3c733dd05a34d3b8a8f0777a8379b3c5c81ec452ea27b3bddd4d7808f4746","garden.io/version":"v-cc30670b1e"},"labels":{"module":"mysql","service":"mysql"},"name":"mysql","namespace":"localhost-demo"},"spec":{"replicas":1,"revisionHistoryLimit":3,"selector":{"matchLabels":{"service":"mysql"}},"strategy":{"rollingUpdate":{"maxSurge":1,"maxUnavailable":1},"type":"RollingUpdate"},"template":{"metadata":{"annotations":{"garden.io/generated":"true","garden.io/manifest-hash":"c8e566c8d3af96d3b5103e9559719045329f8a8fab73fff1dbd20a4f7f4a7518","garden.io/version":"v-cc30670b1e"},"labels":{"module":"mysql","service":"mysql"}},"spec":{"containers":[{"env":[{"name":"GARDEN_VERSION","value":"v-cc30670b1e"},{"name":"GARDEN_MODULE_VERSION","value":"v-b8ece8345c"},{"name":"MYSQL_ROOT_PASSWORD","value":"password"},{"name":"MYSQL_USER","value":"demo"},{"name":"MYSQL_PASSWORD","value":"password"},{"name":"TZ","value":"America/New_York"},{"name":"POD_HOST_IP","valueFrom":{"fieldRef":{"fieldPath":"status.hostIP"}}},{"name":"POD_IP","valueFrom":{"fieldRef":{"fieldPath":"status.podIP"}}},{"name":"POD_NAME","valueFrom":{"fieldRef":{"fieldPath":"metadata.name"}}},{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"fieldPath":"metadata.namespace"}}},{"name":"POD_NODE_NAME","valueFrom":{"fieldRef":{"fieldPath":"spec.nodeName"}}},{"name":"POD_SERVICE_ACCOUNT","valueFrom":{"fieldRef":{"fieldPath":"spec.serviceAccountName"}}},{"name":"POD_UID","valueFrom":{"fieldRef":{"fieldPath":"metadata.uid"}}}],"image":"mysql:8-debian","imagePullPolicy":"IfNotPresent","livenessProbe":{"exec":{"command":["mysql","-u","root","--password=password","-e","SELECT 1"]},"failureThreshold":3,"initialDelaySeconds":90,"periodSeconds":5,"successThreshold":1,"timeoutSeconds":3},"name":"mysql","ports":[{"containerPort":3306,"name":"mysql","protocol":"TCP"}],"readinessProbe":{"exec":{"command":["mysql","-u","root","--password=password","-e","SELECT 1"]},"failureThreshold":90,"initialDelaySeconds":2,"periodSeconds":1,"successThreshold":2,"timeoutSeconds":3},"resources":{"limits":{"cpu":"1","memory":"1Gi"},"requests":{"cpu":"10m","memory":"90Mi"}},"securityContext":{"allowPrivilegeEscalation":false},"volumeMounts":[{"mountPath":"/var/lib/mysql","name":"mysql-volume"}]}],"dnsPolicy":"ClusterFirst","restartPolicy":"Always","terminationGracePeriodSeconds":5,"volumes":[{"emptyDir":{},"name":"mysql-volume"}]}}}}
+    creationTimestamp: "2023-05-26T12:59:42Z"
+    generation: 1
+    labels:
+      module: mysql
+      service: mysql
+    name: mysql
+    namespace: localhost-demo
+    resourceVersion: "1293639"
+    uid: 7f2fcf8c-a4c4-4c3e-b1bc-addc62826390
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 3
+    selector:
+      matchLabels:
+        service: mysql
+    strategy:
+      rollingUpdate:
+        maxSurge: 1
+        maxUnavailable: 1
+      type: RollingUpdate
+    template:
+      metadata:
+        annotations:
+          garden.io/generated: "true"
+          garden.io/manifest-hash: c8e566c8d3af96d3b5103e9559719045329f8a8fab73fff1dbd20a4f7f4a7518
+          garden.io/version: v-cc30670b1e
+        creationTimestamp: null
+        labels:
+          module: mysql
+          service: mysql
+      spec:
+        containers:
+        - env:
+          - name: GARDEN_VERSION
+            value: v-cc30670b1e
+          - name: GARDEN_MODULE_VERSION
+            value: v-b8ece8345c
+          - name: MYSQL_ROOT_PASSWORD
+            value: password
+          - name: MYSQL_USER
+            value: demo
+          - name: MYSQL_PASSWORD
+            value: password
+          - name: TZ
+            value: America/New_York
+          - name: POD_HOST_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: POD_NODE_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: spec.nodeName
+          - name: POD_SERVICE_ACCOUNT
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: spec.serviceAccountName
+          - name: POD_UID
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.uid
+          image: mysql:8-debian
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            exec:
+              command:
+              - mysql
+              - -u
+              - root
+              - --password=password
+              - -e
+              - SELECT 1
+            failureThreshold: 3
+            initialDelaySeconds: 90
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 3
+          name: mysql
+          ports:
+          - containerPort: 3306
+            name: mysql
+            protocol: TCP
+          readinessProbe:
+            exec:
+              command:
+              - mysql
+              - -u
+              - root
+              - --password=password
+              - -e
+              - SELECT 1
+            failureThreshold: 90
+            initialDelaySeconds: 2
+            periodSeconds: 1
+            successThreshold: 2
+            timeoutSeconds: 3
+          resources:
+            limits:
+              cpu: "1"
+              memory: 1Gi
+            requests:
+              cpu: 10m
+              memory: 90Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /var/lib/mysql
+            name: mysql-volume
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 5
+        volumes:
+        - emptyDir: {}
+          name: mysql-volume
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2023-05-26T12:59:42Z"
+      lastUpdateTime: "2023-05-26T12:59:42Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2023-05-26T12:59:42Z"
+      lastUpdateTime: "2023-05-26T12:59:48Z"
+      message: ReplicaSet "mysql-967df6654" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+kind: List
+metadata:
+  resourceVersion: ""

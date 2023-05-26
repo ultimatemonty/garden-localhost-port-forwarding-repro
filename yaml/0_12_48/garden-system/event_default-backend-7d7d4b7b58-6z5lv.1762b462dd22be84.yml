@@ -1,0 +1,28 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-05-26T13:25:47Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{default-backend}
+  kind: Pod
+  name: default-backend-7d7d4b7b58-6z5lv
+  namespace: garden-system
+  resourceVersion: "1295744"
+  uid: c374aa4c-ce03-4dea-b48d-00e1a2e0ce32
+kind: Event
+lastTimestamp: "2023-05-26T13:25:47Z"
+message: Container image "gardendev/default-backend:v0.1" already present on machine
+metadata:
+  creationTimestamp: "2023-05-26T13:25:47Z"
+  name: default-backend-7d7d4b7b58-6z5lv.1762b462dd22be84
+  namespace: garden-system
+  resourceVersion: "1295753"
+  uid: 486e7d28-2b80-47bf-be2f-66bc4287e646
+reason: Pulled
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: docker-desktop
+type: Normal

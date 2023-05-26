@@ -1,0 +1,26 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-05-26T13:25:52Z"
+involvedObject:
+  apiVersion: v1
+  kind: ConfigMap
+  name: garden-nginx-ingress-nginx-controller
+  namespace: garden-system
+  resourceVersion: "1295767"
+  uid: 7c6a4f08-6551-4053-bac1-dfad66f69083
+kind: Event
+lastTimestamp: "2023-05-26T13:25:52Z"
+message: ConfigMap garden-system/garden-nginx-ingress-nginx-controller
+metadata:
+  creationTimestamp: "2023-05-26T13:25:52Z"
+  name: garden-nginx-ingress-nginx-controller.1762b464017e9ce8
+  namespace: garden-system
+  resourceVersion: "1295791"
+  uid: 7b0e8e51-fb3c-40a3-b5dc-c2de2f376a2d
+reason: CREATE
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: nginx-ingress-controller
+type: Normal

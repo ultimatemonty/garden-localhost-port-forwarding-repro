@@ -1,0 +1,32 @@
+kind: Project
+name: demo
+dotIgnoreFiles:
+  - .gitignore
+environments:
+  - name: local
+    providers:
+      - name: local-kubernetes
+        defaultHostname: local.demo.garden
+        namespace: localhost-demo
+        environments: [local]
+---
+kind: Module
+description: MySQL container
+type: container
+name: mysql
+image: mysql:8-debian
+services:
+  - name: mysql
+    volumes: # A persistent volume for the data.
+      - name: mysql-volume
+        containerPath: /var/lib/mysql
+    ports:  # Expose the default MySQL port
+      - name: mysql
+        containerPort: 3306
+    healthCheck:
+      command: [ mysql, -u, root, --password=password, -e, "SELECT 1" ]
+    env:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: demo
+      MYSQL_PASSWORD: password
+      TZ: "America/New_York"

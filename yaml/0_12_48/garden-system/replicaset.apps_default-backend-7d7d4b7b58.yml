@@ -1,0 +1,116 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "1"
+    garden.io/configured.replicas: "1"
+    garden.io/generated: "true"
+    garden.io/manifest-hash: f1477dfc4a89c46adbd86b74880d94e2fb2cf55da79c61f16f1d4b4dda9b80ca
+    garden.io/version: v-2d58c28944
+  creationTimestamp: "2023-05-26T13:25:46Z"
+  generation: 1
+  labels:
+    module: default-backend
+    pod-template-hash: 7d7d4b7b58
+    service: default-backend
+  name: default-backend-7d7d4b7b58
+  namespace: garden-system
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: default-backend
+    uid: 8c4a99d8-96d5-4647-bad2-ba5a53334132
+  resourceVersion: "1295759"
+  uid: 0a0d5120-49fb-46fd-890b-904b42cd5c19
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      pod-template-hash: 7d7d4b7b58
+      service: default-backend
+  template:
+    metadata:
+      annotations:
+        garden.io/generated: "true"
+        garden.io/manifest-hash: e14e60d4361d65242c498b88ed26ce481592d6535d5c8102d20fef3f2ac0f0d5
+        garden.io/version: v-2d58c28944
+      creationTimestamp: null
+      labels:
+        module: default-backend
+        pod-template-hash: 7d7d4b7b58
+        service: default-backend
+    spec:
+      containers:
+      - env:
+        - name: GARDEN_VERSION
+          value: v-2d58c28944
+        - name: GARDEN_MODULE_VERSION
+          value: v-24864f339e
+        - name: POD_HOST_IP
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: status.hostIP
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: status.podIP
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        - name: POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+        - name: POD_NODE_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: spec.nodeName
+        - name: POD_SERVICE_ACCOUNT
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: spec.serviceAccountName
+        - name: POD_UID
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.uid
+        image: gardendev/default-backend:v0.1
+        imagePullPolicy: IfNotPresent
+        name: default-backend
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
+        resources:
+          limits:
+            cpu: "1"
+            memory: 1Gi
+          requests:
+            cpu: 10m
+            memory: 90Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 5
+status:
+  availableReplicas: 1
+  fullyLabeledReplicas: 1
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1

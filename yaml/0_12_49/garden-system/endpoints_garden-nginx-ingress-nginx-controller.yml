@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-05-26T13:58:16Z"
+  creationTimestamp: "2023-05-26T13:57:56Z"
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: garden-nginx
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/version: 1.1.0
+    helm.sh/chart: ingress-nginx-4.0.13
+  name: garden-nginx-ingress-nginx-controller
+  namespace: garden-system
+  resourceVersion: "1298551"
+  uid: 0f617f17-dfb9-45de-bbf1-7e42db4184b3
+subsets:
+- addresses:
+  - ip: 10.1.15.141
+    nodeName: docker-desktop
+    targetRef:
+      kind: Pod
+      name: garden-nginx-ingress-nginx-controller-v4wsr
+      namespace: garden-system
+      uid: 1a93498b-64f0-4602-ba25-f4d5b1234108
+  ports:
+  - appProtocol: https
+    name: https
+    port: 443
+    protocol: TCP
+  - appProtocol: http
+    name: http
+    port: 80
+    protocol: TCP

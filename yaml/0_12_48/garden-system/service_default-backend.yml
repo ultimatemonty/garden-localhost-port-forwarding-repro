@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    garden.io/generated: "true"
+    garden.io/manifest-hash: e14e60d4361d65242c498b88ed26ce481592d6535d5c8102d20fef3f2ac0f0d5
+    garden.io/version: v-2d58c28944
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"garden.io/generated":"true","garden.io/manifest-hash":"e14e60d4361d65242c498b88ed26ce481592d6535d5c8102d20fef3f2ac0f0d5","garden.io/version":"v-2d58c28944"},"labels":{"module":"default-backend","service":"default-backend"},"name":"default-backend","namespace":"garden-system"},"spec":{"ports":[{"name":"http","port":80,"protocol":"TCP","targetPort":80}],"selector":{"service":"default-backend"},"type":"ClusterIP"}}
+  creationTimestamp: "2023-05-26T13:25:46Z"
+  labels:
+    module: default-backend
+    service: default-backend
+  name: default-backend
+  namespace: garden-system
+  resourceVersion: "1295742"
+  uid: ad94181e-d6fd-469d-a3a0-9a8163975fa9
+spec:
+  clusterIP: 10.107.36.187
+  clusterIPs:
+  - 10.107.36.187
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    service: default-backend
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

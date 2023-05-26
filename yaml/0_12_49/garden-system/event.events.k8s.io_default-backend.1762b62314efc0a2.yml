@@ -1,0 +1,24 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-05-26T13:57:52Z"
+deprecatedLastTimestamp: "2023-05-26T13:57:52Z"
+deprecatedSource:
+  component: deployment-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-05-26T13:57:52Z"
+  name: default-backend.1762b62314efc0a2
+  namespace: garden-system
+  resourceVersion: "1298460"
+  uid: 34b0f5ae-a059-430e-b5c3-f9a7457a39d3
+note: Scaled up replica set default-backend-7d7d4b7b58 to 1
+reason: ScalingReplicaSet
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: default-backend
+  namespace: garden-system
+  resourceVersion: "1298458"
+  uid: 244b1866-3c86-42c8-a9a0-48b0fcb9b669
+type: Normal

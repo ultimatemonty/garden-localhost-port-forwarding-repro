@@ -1,0 +1,26 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-05-26T13:57:57Z"
+deprecatedLastTimestamp: "2023-05-26T13:57:57Z"
+deprecatedSource:
+  component: kubelet
+  host: docker-desktop
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-05-26T13:57:57Z"
+  name: garden-nginx-ingress-nginx-controller-v4wsr.1762b62429c9ff25
+  namespace: garden-system
+  resourceVersion: "1298516"
+  uid: 5aa98111-a78b-43f8-9c3e-7178b1bff450
+note: Created container controller
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{controller}
+  kind: Pod
+  name: garden-nginx-ingress-nginx-controller-v4wsr
+  namespace: garden-system
+  resourceVersion: "1298502"
+  uid: 1a93498b-64f0-4602-ba25-f4d5b1234108
+type: Normal

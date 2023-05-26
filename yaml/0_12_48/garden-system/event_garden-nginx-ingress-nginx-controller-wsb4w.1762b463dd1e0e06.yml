@@ -1,0 +1,29 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-05-26T13:25:51Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{controller}
+  kind: Pod
+  name: garden-nginx-ingress-nginx-controller-wsb4w
+  namespace: garden-system
+  resourceVersion: "1295781"
+  uid: 833d442d-381c-4804-99b3-a8addafc9f4f
+kind: Event
+lastTimestamp: "2023-05-26T13:25:51Z"
+message: Container image "k8s.gcr.io/ingress-nginx/controller:v1.1.0@sha256:f766669fdcf3dc26347ed273a55e754b427eb4411ee075a53f30718b4499076a"
+  already present on machine
+metadata:
+  creationTimestamp: "2023-05-26T13:25:51Z"
+  name: garden-nginx-ingress-nginx-controller-wsb4w.1762b463dd1e0e06
+  namespace: garden-system
+  resourceVersion: "1295788"
+  uid: 66dce2e9-85f4-479b-b3c1-264ff31e20aa
+reason: Pulled
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: docker-desktop
+type: Normal

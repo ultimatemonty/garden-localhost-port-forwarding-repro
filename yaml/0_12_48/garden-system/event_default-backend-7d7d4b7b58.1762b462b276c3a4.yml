@@ -1,0 +1,26 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-05-26T13:25:46Z"
+involvedObject:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: default-backend-7d7d4b7b58
+  namespace: garden-system
+  resourceVersion: "1295736"
+  uid: 0a0d5120-49fb-46fd-890b-904b42cd5c19
+kind: Event
+lastTimestamp: "2023-05-26T13:25:46Z"
+message: 'Created pod: default-backend-7d7d4b7b58-6z5lv'
+metadata:
+  creationTimestamp: "2023-05-26T13:25:46Z"
+  name: default-backend-7d7d4b7b58.1762b462b276c3a4
+  namespace: garden-system
+  resourceVersion: "1295741"
+  uid: d11fd52d-3ef2-437d-be82-c7896cb83e75
+reason: SuccessfulCreate
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: replicaset-controller
+type: Normal

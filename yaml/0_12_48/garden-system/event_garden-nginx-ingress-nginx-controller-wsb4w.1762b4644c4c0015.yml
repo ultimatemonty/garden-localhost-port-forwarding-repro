@@ -1,0 +1,26 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-05-26T13:25:53Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: garden-nginx-ingress-nginx-controller-wsb4w
+  namespace: garden-system
+  resourceVersion: "1295784"
+  uid: 833d442d-381c-4804-99b3-a8addafc9f4f
+kind: Event
+lastTimestamp: "2023-05-26T13:25:53Z"
+message: NGINX reload triggered due to a change in configuration
+metadata:
+  creationTimestamp: "2023-05-26T13:25:53Z"
+  name: garden-nginx-ingress-nginx-controller-wsb4w.1762b4644c4c0015
+  namespace: garden-system
+  resourceVersion: "1295798"
+  uid: 669eadaa-ed87-4868-a615-24ff63db0ade
+reason: RELOAD
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: nginx-ingress-controller
+type: Normal

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"garden-nginx-ingress-nginx-controller-wsb4w","leaseDurationSeconds":30,"acquireTime":"2023-05-26T13:25:53Z","renewTime":"2023-05-26T13:49:17Z","leaderTransitions":0}'
+  creationTimestamp: "2023-05-26T13:25:53Z"
+  name: ingress-controller-leader
+  namespace: garden-system
+  resourceVersion: "1297751"
+  uid: 9f49eb13-65f3-46f4-8b38-d1c09f7adbe8

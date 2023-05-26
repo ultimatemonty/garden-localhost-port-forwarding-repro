@@ -1,0 +1,51 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.1.15.139
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: docker-desktop
+  targetRef:
+    kind: Pod
+    name: garden-nginx-ingress-nginx-controller-wsb4w
+    namespace: garden-system
+    uid: 833d442d-381c-4804-99b3-a8addafc9f4f
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-05-26T13:26:10Z"
+  creationTimestamp: "2023-05-26T13:25:50Z"
+  generateName: garden-nginx-ingress-nginx-controller-
+  generation: 3
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: garden-nginx
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/version: 1.1.0
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    helm.sh/chart: ingress-nginx-4.0.13
+    kubernetes.io/service-name: garden-nginx-ingress-nginx-controller
+  name: garden-nginx-ingress-nginx-controller-4lbtw
+  namespace: garden-system
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: garden-nginx-ingress-nginx-controller
+    uid: a5fe72e3-3c4b-47da-8f25-13ad9ac9404f
+  resourceVersion: "1295823"
+  uid: d99faa9a-1c4c-4590-ba84-1f24ded50d36
+ports:
+- appProtocol: https
+  name: https
+  port: 443
+  protocol: TCP
+- appProtocol: http
+  name: http
+  port: 80
+  protocol: TCP

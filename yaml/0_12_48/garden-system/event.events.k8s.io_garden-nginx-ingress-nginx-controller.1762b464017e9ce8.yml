@@ -1,0 +1,24 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-05-26T13:25:52Z"
+deprecatedLastTimestamp: "2023-05-26T13:25:52Z"
+deprecatedSource:
+  component: nginx-ingress-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-05-26T13:25:52Z"
+  name: garden-nginx-ingress-nginx-controller.1762b464017e9ce8
+  namespace: garden-system
+  resourceVersion: "1295791"
+  uid: 7b0e8e51-fb3c-40a3-b5dc-c2de2f376a2d
+note: ConfigMap garden-system/garden-nginx-ingress-nginx-controller
+reason: CREATE
+regarding:
+  apiVersion: v1
+  kind: ConfigMap
+  name: garden-nginx-ingress-nginx-controller
+  namespace: garden-system
+  resourceVersion: "1295767"
+  uid: 7c6a4f08-6551-4053-bac1-dfad66f69083
+type: Normal

@@ -1,0 +1,20 @@
+apiVersion: v1
+data:
+  allow-snippet-annotations: "true"
+kind: ConfigMap
+metadata:
+  annotations:
+    meta.helm.sh/release-name: garden-nginx
+    meta.helm.sh/release-namespace: garden-system
+  creationTimestamp: "2023-05-26T13:57:56Z"
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: garden-nginx
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/version: 1.1.0
+    helm.sh/chart: ingress-nginx-4.0.13
+  name: garden-nginx-ingress-nginx-controller
+  namespace: garden-system
+  resourceVersion: "1298489"
+  uid: a440d77c-58f7-453b-b5d2-587b7a4b316b

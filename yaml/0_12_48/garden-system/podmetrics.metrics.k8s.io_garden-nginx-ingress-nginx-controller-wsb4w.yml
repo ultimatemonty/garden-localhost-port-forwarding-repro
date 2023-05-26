@@ -1,0 +1,19 @@
+apiVersion: metrics.k8s.io/v1beta1
+containers:
+- name: controller
+  usage:
+    cpu: 3858309n
+    memory: 135940Ki
+kind: PodMetrics
+metadata:
+  creationTimestamp: "2023-05-26T13:49:21Z"
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: garden-nginx
+    app.kubernetes.io/name: ingress-nginx
+    controller-revision-hash: 75c777bb9c
+    pod-template-generation: "1"
+  name: garden-nginx-ingress-nginx-controller-wsb4w
+  namespace: garden-system
+timestamp: "2023-05-26T13:49:08Z"
+window: 14.821s

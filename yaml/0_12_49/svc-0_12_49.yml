@@ -1,0 +1,43 @@
+# 0.12.49
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      garden.io/generated: "true"
+      garden.io/manifest-hash: c8e566c8d3af96d3b5103e9559719045329f8a8fab73fff1dbd20a4f7f4a7518
+      garden.io/version: v-cc30670b1e
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"garden.io/generated":"true","garden.io/manifest-hash":"c8e566c8d3af96d3b5103e9559719045329f8a8fab73fff1dbd20a4f7f4a7518","garden.io/version":"v-cc30670b1e"},"labels":{"module":"mysql","service":"mysql"},"name":"mysql","namespace":"localhost-demo"},"spec":{"ports":[{"name":"mysql","port":3306,"protocol":"TCP","targetPort":3306}],"selector":{"service":"mysql"},"type":"ClusterIP"}}
+    creationTimestamp: "2023-05-26T12:46:40Z"
+    labels:
+      module: mysql
+      service: mysql
+    name: mysql
+    namespace: localhost-demo
+    resourceVersion: "1292481"
+    uid: dbf486d3-2549-4606-8b1c-1c532223bda7
+  spec:
+    clusterIP: 10.104.241.158
+    clusterIPs:
+    - 10.104.241.158
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: mysql
+      port: 3306
+      protocol: TCP
+      targetPort: 3306
+    selector:
+      service: mysql
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""

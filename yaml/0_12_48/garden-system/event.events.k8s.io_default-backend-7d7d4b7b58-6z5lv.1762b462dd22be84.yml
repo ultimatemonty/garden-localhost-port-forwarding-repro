@@ -1,0 +1,26 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-05-26T13:25:47Z"
+deprecatedLastTimestamp: "2023-05-26T13:25:47Z"
+deprecatedSource:
+  component: kubelet
+  host: docker-desktop
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-05-26T13:25:47Z"
+  name: default-backend-7d7d4b7b58-6z5lv.1762b462dd22be84
+  namespace: garden-system
+  resourceVersion: "1295753"
+  uid: 486e7d28-2b80-47bf-be2f-66bc4287e646
+note: Container image "gardendev/default-backend:v0.1" already present on machine
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{default-backend}
+  kind: Pod
+  name: default-backend-7d7d4b7b58-6z5lv
+  namespace: garden-system
+  resourceVersion: "1295744"
+  uid: c374aa4c-ce03-4dea-b48d-00e1a2e0ce32
+type: Normal

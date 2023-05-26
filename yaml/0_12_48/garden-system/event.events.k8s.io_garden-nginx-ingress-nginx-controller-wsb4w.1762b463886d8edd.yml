@@ -1,0 +1,25 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-05-26T13:25:50Z"
+deprecatedLastTimestamp: "2023-05-26T13:25:50Z"
+deprecatedSource:
+  component: default-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-05-26T13:25:50Z"
+  name: garden-nginx-ingress-nginx-controller-wsb4w.1762b463886d8edd
+  namespace: garden-system
+  resourceVersion: "1295783"
+  uid: 332842aa-e41a-491b-83c7-44d55e0ec8f2
+note: Successfully assigned garden-system/garden-nginx-ingress-nginx-controller-wsb4w
+  to docker-desktop
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: garden-nginx-ingress-nginx-controller-wsb4w
+  namespace: garden-system
+  resourceVersion: "1295779"
+  uid: 833d442d-381c-4804-99b3-a8addafc9f4f
+type: Normal

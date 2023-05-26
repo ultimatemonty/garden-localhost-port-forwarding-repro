@@ -1,0 +1,42 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.1.15.140
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: docker-desktop
+  targetRef:
+    kind: Pod
+    name: default-backend-7d7d4b7b58-qz6vw
+    namespace: garden-system
+    uid: 244c8729-9e2c-4303-a13a-9a26f5e98578
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-05-26T13:57:53Z"
+  creationTimestamp: "2023-05-26T13:57:52Z"
+  generateName: default-backend-
+  generation: 2
+  labels:
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    kubernetes.io/service-name: default-backend
+    module: default-backend
+    service: default-backend
+  name: default-backend-qgbdq
+  namespace: garden-system
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: default-backend
+    uid: cf448c4b-46fb-4aa9-a3a0-6bcd8b3f5ee4
+  resourceVersion: "1298481"
+  uid: 9d7645d7-b961-4ebf-be59-478112d33e7e
+ports:
+- name: http
+  port: 80
+  protocol: TCP

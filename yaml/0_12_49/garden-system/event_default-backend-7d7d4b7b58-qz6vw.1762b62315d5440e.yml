@@ -1,0 +1,26 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-05-26T13:57:52Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: default-backend-7d7d4b7b58-qz6vw
+  namespace: garden-system
+  resourceVersion: "1298461"
+  uid: 244c8729-9e2c-4303-a13a-9a26f5e98578
+kind: Event
+lastTimestamp: "2023-05-26T13:57:52Z"
+message: Successfully assigned garden-system/default-backend-7d7d4b7b58-qz6vw to docker-desktop
+metadata:
+  creationTimestamp: "2023-05-26T13:57:52Z"
+  name: default-backend-7d7d4b7b58-qz6vw.1762b62315d5440e
+  namespace: garden-system
+  resourceVersion: "1298468"
+  uid: be3fd27f-8ac2-4036-9f76-841b42e845a3
+reason: Scheduled
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: default-scheduler
+type: Normal

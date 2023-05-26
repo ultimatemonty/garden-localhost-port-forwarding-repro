@@ -1,0 +1,26 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-05-26T13:25:46Z"
+involvedObject:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: default-backend
+  namespace: garden-system
+  resourceVersion: "1295735"
+  uid: 8c4a99d8-96d5-4647-bad2-ba5a53334132
+kind: Event
+lastTimestamp: "2023-05-26T13:25:46Z"
+message: Scaled up replica set default-backend-7d7d4b7b58 to 1
+metadata:
+  creationTimestamp: "2023-05-26T13:25:46Z"
+  name: default-backend.1762b462b212c79a
+  namespace: garden-system
+  resourceVersion: "1295737"
+  uid: 206d3280-d2e8-4c16-8729-213f2b67ed6a
+reason: ScalingReplicaSet
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: deployment-controller
+type: Normal

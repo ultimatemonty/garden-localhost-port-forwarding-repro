@@ -1,0 +1,24 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-05-26T13:25:50Z"
+deprecatedLastTimestamp: "2023-05-26T13:25:50Z"
+deprecatedSource:
+  component: daemonset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-05-26T13:25:50Z"
+  name: garden-nginx-ingress-nginx-controller.1762b46387da17f5
+  namespace: garden-system
+  resourceVersion: "1295780"
+  uid: 1301cf17-8f99-4ccc-8021-711496df4be6
+note: 'Created pod: garden-nginx-ingress-nginx-controller-wsb4w'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: DaemonSet
+  name: garden-nginx-ingress-nginx-controller
+  namespace: garden-system
+  resourceVersion: "1295776"
+  uid: e9d969fa-a097-4599-86b7-8198201e417d
+type: Normal

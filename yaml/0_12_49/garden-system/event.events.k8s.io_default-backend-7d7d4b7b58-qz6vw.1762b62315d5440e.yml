@@ -1,0 +1,24 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-05-26T13:57:52Z"
+deprecatedLastTimestamp: "2023-05-26T13:57:52Z"
+deprecatedSource:
+  component: default-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-05-26T13:57:52Z"
+  name: default-backend-7d7d4b7b58-qz6vw.1762b62315d5440e
+  namespace: garden-system
+  resourceVersion: "1298468"
+  uid: be3fd27f-8ac2-4036-9f76-841b42e845a3
+note: Successfully assigned garden-system/default-backend-7d7d4b7b58-qz6vw to docker-desktop
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: default-backend-7d7d4b7b58-qz6vw
+  namespace: garden-system
+  resourceVersion: "1298461"
+  uid: 244c8729-9e2c-4303-a13a-9a26f5e98578
+type: Normal

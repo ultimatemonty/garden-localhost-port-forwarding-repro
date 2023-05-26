@@ -1,0 +1,28 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-05-26T13:25:51Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{controller}
+  kind: Pod
+  name: garden-nginx-ingress-nginx-controller-wsb4w
+  namespace: garden-system
+  resourceVersion: "1295781"
+  uid: 833d442d-381c-4804-99b3-a8addafc9f4f
+kind: Event
+lastTimestamp: "2023-05-26T13:25:51Z"
+message: Started container controller
+metadata:
+  creationTimestamp: "2023-05-26T13:25:51Z"
+  name: garden-nginx-ingress-nginx-controller-wsb4w.1762b463e7f4c3e4
+  namespace: garden-system
+  resourceVersion: "1295790"
+  uid: 8c426b21-16f1-45fb-8af8-a819cc93272b
+reason: Started
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: docker-desktop
+type: Normal
