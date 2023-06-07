@@ -1,0 +1,96 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels:
+    service: mysql-volume
+  name: mysql-volume
+  namespace: localhost-demo
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    module: mysql
+    service: mysql
+  name: mysql
+  namespace: localhost-demo
+spec:
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: db
+    port: 3306
+    protocol: TCP
+    targetPort: 3306
+  selector:
+    service: mysql
+  sessionAffinity: None
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    module: mysql
+    service: mysql
+  name: mysql
+  namespace: localhost-demo
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  selector:
+    matchLabels:
+      service: mysql
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        module: mysql
+        service: mysql
+    spec:
+      containers:
+      - args:
+        - mysqld
+        - --bind-address=0.0.0.0
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
+        - name: MYSQL_USER
+          value: demo
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
+        - name: TZ
+          value: America/New_York
+        image: mysql:8-debian
+        imagePullPolicy: IfNotPresent
+        name: mysql
+        ports:
+        - containerPort: 3306
+          name: db
+          protocol: TCP
+        resources:
+          limits:
+            cpu: "1"
+            memory: 1Gi
+          requests:
+            cpu: 10m
+            memory: 90Mi
+        volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: mysql-volume
+      volumes:
+      - name: mysql-volume
+        persistentVolumeClaim:
+          claimName: mysql-volume

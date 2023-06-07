@@ -9,24 +9,38 @@ environments:
         defaultHostname: local.demo.garden
         namespace: localhost-demo
         environments: [local]
+# ---
+# kind: Module
+# description: MySQL container
+# type: container
+# name: mysql
+# image: mysql:8-debian
+# services:
+#   - name: mysql
+#     volumes: # A persistent volume for the data.
+#       - name: mysql-volume
+#         containerPath: /var/lib/mysql
+#     ports:  # Expose the default MySQL port
+#       - name: mysql
+#         containerPort: 3306
+#         hostPort: 3310
+#         protocol: TCP
+#     healthCheck:
+#       command: [ mysql, -u, root, --password=password, -e, "SELECT 1" ]
+#     env:
+#       MYSQL_ROOT_PASSWORD: password
+#       MYSQL_USER: demo
+#       MYSQL_PASSWORD: password
+#       TZ: "America/New_York"
 ---
 kind: Module
-description: MySQL container
-type: container
+description: MySQL kubernetes pods
+type: kubernetes
 name: mysql
-image: mysql:8-debian
-services:
+portForwards:
   - name: mysql
-    volumes: # A persistent volume for the data.
-      - name: mysql-volume
-        containerPath: /var/lib/mysql
-    ports:  # Expose the default MySQL port
-      - name: mysql
-        containerPort: 3306
-    healthCheck:
-      command: [ mysql, -u, root, --password=password, -e, "SELECT 1" ]
-    env:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_USER: demo
-      MYSQL_PASSWORD: password
-      TZ: "America/New_York"
+    resource: svc/mysql
+    targetPort: 3306
+    localPort: 3306
+files:
+  - mysql.yaml
