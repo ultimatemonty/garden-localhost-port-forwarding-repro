@@ -12,7 +12,7 @@ environments:
 # ---
 # kind: Module
 # description: MySQL container
-# type: container
+# type: containe
 # name: mysql
 # image: mysql:8-debian
 # services:
